@@ -1,6 +1,6 @@
 
 // Variables
-var screen = 1; //Lets the page know which screen to display, increases with clicks.
+var screen = 0; //Lets the page know which screen to display, increases with clicks.
 let gif1;
 let vid20;
 
@@ -20,9 +20,18 @@ function draw() {
     
 	background(255);
     
-	var func = new Function(
+	/*var func = new Function(
 		"screen_" + screen +"()"
-	)();
+	)();*/
+     if (screen == 0) {
+    screen_0();
+  } else if (screen == 1) {
+    screen_1();
+  } else if (screen == 2) {
+    screen_2();
+  } else if (screen == 20) {
+      screen_20();
+  }
     
    
 
@@ -139,7 +148,6 @@ function screen_19() {
 function screen_20() {
     background(0);
     image(vid20, windowWidth/2, windowHeight/2-1, 1.09*vid20.width*windowHeight/vid20.height, 1.09*height);
-    vid20.play();
     vid20.loop();
 }
 
