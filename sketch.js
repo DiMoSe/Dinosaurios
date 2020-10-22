@@ -2,15 +2,15 @@
 // Variables
 var screen = 0; //Lets the page know which screen to display, increases with clicks.
 let gif1;
-let vid20;
+var vid20;
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 
     gif1 = loadImage('Material/1/12-huellas.gif');
     
-	vid20 = createVideo('Material/20/Tira horizontal menor resolución.mp4');
-	vid20.hide();
+	vid20 = createVideo('Material/20/Tira horizontal menor resolución.webm');
+	//vid20.hide();
     
     
 }
@@ -67,7 +67,7 @@ function screen_1() {
 }
 
 function screen_2() {
-
+    createCanvas(windowWidth, windowHeight);
 }
 
 function screen_3() {
@@ -146,9 +146,12 @@ function screen_19() {
 }
 
 function screen_20() {
+    
     background(0);
     image(vid20, windowWidth/2, windowHeight/2-1, 1.09*vid20.width*windowHeight/vid20.height, 1.09*height);
     vid20.loop();
+    vid20.onended(printaa);
+    
 }
 
 function screen_21() {
@@ -174,14 +177,18 @@ With each press of the mouse the screen counter goes up
 and so the screen changes to the next page in the book.
 When you reach the end of the book the counter resets and sends the
 user back to the first page*/
-function keyPressed() {
-    if(keyCode === RIGHT_ARROW) {
+function mousePressed() {
+    //if(keyCode === RIGHT_ARROW) {
 	screen++;
     clear();
 	if (screen > 24) {
 		screen = 0
 	}
-    }
+    //}
+}
+
+function printaa() {
+    print('HOLA');
 }
 /*MousePressed
 END*/
