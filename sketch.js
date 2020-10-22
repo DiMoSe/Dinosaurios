@@ -9,7 +9,7 @@ function setup() {
 
     gif1 = loadImage('Material/1/12-huellas.gif');
     
-	vid20 = createVideo('Material/20/Tira_horizontal.mp4');
+	vid20 = createVideo('Material/20/Tira horizontal menor resolución.mp4');
 	vid20.hide();
     
     
