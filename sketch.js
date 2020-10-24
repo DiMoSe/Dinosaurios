@@ -76,7 +76,7 @@ function preload() {
     gif5 = loadImage('Material/5/5-Hippocampus_1.gif');
     
     gif6 = loadImage('Material/6/6 bestia y cabeza.png');
-    audio6 = loadSound('Material/6/338674__newagesoup__wolf-growl.wav');
+    audio6 = loadSound('Material/6/338674__newagesoup__wolf-growl.mp3');
     
     gif7 = loadImage('Material/7/7-sin-fondo-se-mueve-bola_1.gif');
     
@@ -92,8 +92,8 @@ function preload() {
     gif10 = loadImage('Material/10/10 izquierda dino y escalera.png');
     gif10_2= loadImage('Material/10/10-arriba-derecha-plantas.gif');
     gif10_3= loadImage('Material/10/Abajo-derecha-pies-mueven.gif');
-    audio10 = loadSound('Material/10/PARA DINO CON ESCALERA.wav');
-    audio10_2 = loadSound('Material/10/PARA PLANTAS.wav');
+    audio10 = loadSound('Material/10/PARA DINO CON ESCALERA.mp3');
+    audio10_2 = loadSound('Material/10/PARA PLANTAS.mp3');
     
     gif11 = loadImage('Material/11/Arriba a la izquierda tres dinos color.png');
     gif11_2 = loadImage('Material/11/11-abajo-a-la-izquierda_1.gif');
@@ -104,14 +104,14 @@ function preload() {
     gif12_2 = loadImage('Material/12/12 abajo izquierda pájaro.png');
     gif12_3 = loadImage('Material/12/12-arriba-derecha-hombre-y-palmera-salta.gif');
     gif12_4 = loadImage('Material/11/11 abajo a la derecha rino (Geo me dijo que se repita esta).png');
-    audio12 = loadSound('Material/12/PARA AVE EN JAULA.wav');
+    audio12 = loadSound('Material/12/PARA AVE EN JAULA.mp3');
     
     gif13 = loadImage('Material/13/13-arriba-izquierda-perro-y-silueta-escapan.gif');
     gif13_2 = loadImage('Material/13/Animal-cola-abajo-izquierda.gif');
     gif13_3 = loadImage('Material/13/13-derecha-hombre-y-espinas-con-huellas.gif');
     
     gif14 = loadImage('Material/14/14-Figuras-y-huellas.gif');
-    audio14 = loadSound('Material/14/TACONES PARA HUELLAS.wav');
+    audio14 = loadSound('Material/14/TACONES PARA HUELLAS.mp3');
     
     gif15 = loadImage('Material/15/15-perro-arriba-izquierda-grafismos.gif');
     gif15_2 = loadImage('Material/15/15-abajo-izquierda-dino-cabeza_1.gif');
@@ -119,40 +119,38 @@ function preload() {
     
     gif16 = loadImage('Material/16/16-dos-dinos-alas-y-huellas.gif');
     gif16_2 = loadImage('Material/16/16-ADN-color-cambia.gif');
-    audio16 = loadSound('Material/16/TAMBOR PARA DINO CON ALAS.wav');
+    audio16 = loadSound('Material/16/TAMBOR PARA DINO CON ALAS.mp3');
     
     gif17 = loadImage('Material/17/17-izquierda-avestruz-cabeza.gif');
     gif17_2  = loadImage('Material/17/17-lado-derecho-color.gif');
-    audio17 = loadSound('Material/17/CAMPANA PARA DETONAR COLOR.wav');
+    audio17 = loadSound('Material/17/CAMPANA PARA DETONAR COLOR.mp3');
     
     gif18 = loadImage('Material/18/18-Izquierda-ave-huellas-y-cuello.gif');
     gif18_2 = loadImage('Material/18/18 Manguera.png');
-    audio18 = loadSound('Material/18/GONG PARA CABEZA DE AVE.wav');
-    audio18_2 = loadSound('Material/18/BURBUJAS PARA MANGUERA.wav');
+    audio18 = loadSound('Material/18/GONG PARA CABEZA DE AVE.mp3');
+    audio18_2 = loadSound('Material/18/BURBUJAS PARA MANGUERA.mp3');
     
     gif19 = loadImage('Material/19/19-ave-con-alas.gif');
     gif19_2 = loadImage('Material/19/19-relojes-y-huellas.gif');
-    audio19 = loadSound('Material/19/SONIDO DE ALAS PARA AVE.wav');
-    audio19_2 = loadSound('Material/19/SONIDO DE RELOJES ALARMA.wav');
-    
-	vid20 = createVideo('Material/20/Tira_horizontal.webm');
-    vid20.hide();
+    audio19 = loadSound('Material/19/SONIDO DE ALAS PARA AVE.mp3');
+    audio19_2 = loadSound('Material/19/SONIDO DE RELOJES ALARMA.mp3');
     
     gif21 = loadImage('Material/21/21-Izquierda-mujer-y-planta-circulos-con-huellas.gif');
     
     gif22 = loadImage('Material/21/21-derecha-personas-y-plantas-cambian.gif');
     
     gif23 = loadImage('Material/22/22-mano-con-sangre.gif');
-    audio23 = loadSound('Material/22/SONIDO LÍQUIDO PARA MANO.wav');
+    audio23 = loadSound('Material/22/SONIDO LÍQUIDO PARA MANO.mp3');
     
     gif24 = loadImage('Material/23/23-Luna-rebota.gif');
-    audio24 = loadSound('Material/23/A VER SI QUEDA MEJOR ESTE - PELOTA REBOTANDO.wav');
+    audio24 = loadSound('Material/23/A VER SI QUEDA MEJOR ESTE - PELOTA REBOTANDO.mp3');
 }
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
     
-    
+    vid20 = createVideo('Material/20/Tira_horizontal.webm');
+    vid20.hide();
 }
 
 function draw() {
@@ -366,12 +364,11 @@ function screen_18() {
 }
 
 function screen_19() {
-    var scale = 0.5;
-    var scale2 = 0.325;
+    var scale = 0.325;
     
     image(gif19, windowWidth/4, windowHeight/2, scale*width,scale*gif19.height*width/gif19.width);
     
-    image(gif19_2, windowWidth/4*3, windowHeight/2, scale2*width,scale2*gif19_2.height*width/gif19_2.width);
+    image(gif19_2, windowWidth/4*3, windowHeight/2, scale*width,scale*gif19_2.height*width/gif19_2.width);
     
 	line(windowWidth/2, 0, windowWidth/2, windowHeight);
 }
