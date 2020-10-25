@@ -14,15 +14,56 @@
             padding: 0;
             margin: 0;
             overflow: hidden;}
+        
+        #loading_img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            margin: -75px 0 0 -75px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+        
+        #loading_img2 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            margin: 50px 0 0 -75px;
+            height: 120px;
+        }
+        
+        @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+        
     </style>
+    
+    <div id="p5_loading" class="loadingclass">
+       
+        <img id = "loading_img" src="Material/0/0.png">
+        <br>
+        <h1 id = "loading_img2">
+            Cargando...
+        </h1>
+    
+    </div>
 
     <script language="JavaScript">
         document.oncontextmenu =new Function("return false;")
     </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.min.js"></script>
     
-     <script src="addons/p5.sound.js"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/addons/p5.sound.min.js"></script>
   
     <script src="sketch.js"></script>
 </head>
