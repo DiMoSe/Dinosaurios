@@ -114,6 +114,7 @@ var audio19;
 var audio19_2;
 
 var vid20;
+var audio20;
 
 var gif21;
 
@@ -126,7 +127,7 @@ var gif24;
 var audio24;
 
 function preload() {
-    gif0 = loadImage('Material/0/0.png');
+    gif0 = loadImage('Material/0/0_2.png');
 
     gif1 = loadImage('Material/1/1.gif');
     
@@ -223,6 +224,8 @@ function preload() {
     gif19_2 = loadImage('Material/19/19_2.gif');
     audio19 = loadSound('Material/19/19.mp3');
     audio19_2 = loadSound('Material/19/19_2.mp3');
+    
+    audio20 = loadSound('Material/20/20.mp3');
     
     gif21 = loadImage('Material/21/21.gif');
     
@@ -744,6 +747,12 @@ function mouseClicked() {
     if(screen != 19){
         audio19.stop();
         audio19_2.stop();
+    }
+    
+    if(screen == 20){
+        audio20.loop();
+    }else{
+        audio20.stop();
     }
     
     if(screen == 23){
